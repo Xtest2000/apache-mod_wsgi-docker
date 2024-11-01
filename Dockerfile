@@ -18,3 +18,5 @@ RUN cd /tmp && wget https://github.com/GrahamDumpleton/mod_wsgi/archive/refs/tag
 && ./configure --with-apxs=/usr/local/apache/bin/apxs --with-python=/usr/bin/python3 && make && make install
 
 RUN echo "LoadModule wsgi_module modules/mod_wsgi.so" >> /usr/local/apache/conf/httpd.conf
+
+RUN rm -rf /tmp
